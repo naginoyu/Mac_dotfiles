@@ -23,7 +23,7 @@ brew "tailscale", restart_service: :changed
 brew "yazi"
 brew "zoxide"
 brew "felixkratz/formulae/borders"
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 cask "alt-tab"
 cask "arc"
 cask "discord"
