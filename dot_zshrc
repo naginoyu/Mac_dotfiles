@@ -1,0 +1,36 @@
+# ===== PATH Settings =====
+export PATH="$HOME/.local/bin:$PATH"   # Claude Code
+export PATH=/usr/local/bin/git:$PATH   # Git
+eval "$(starship init zsh)"            # Starship prompt
+eval "$(sheldon source)"               # Sheldon plugin manager
+eval "$(mise activate zsh)"            # mise
+
+# ===== History Settings =====
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS      # 重複コマンドを履歴に保存しない
+setopt HIST_IGNORE_SPACE     # スペースで始まるコマンドを履歴に保存しない
+setopt SHARE_HISTORY         # 複数ターミナル間で履歴を共有
+setopt APPEND_HISTORY        # 履歴を追記
+
+# ===== Completion =====
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select                    # 補完候補をメニュー選択
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'   # 大文字小文字を区別しない
+
+# ===== Useful Options =====
+setopt AUTO_CD               # ディレクトリ名だけでcd
+setopt CORRECT               # コマンドのスペルミス修正を提案
+setopt NO_BEEP               # ビープ音を無効化
+
+# ===== Key Bindings =====
+bindkey -e                   # Emacsキーバインド
+bindkey '^[[A' history-search-backward   # 上矢印で履歴検索
+bindkey '^[[B' history-search-forward    # 下矢印で履歴検索
+
+# ===== Aliases =====
+alias ll='ls -la'
+alias la='ls -a'
+alias ..='cd ..'
+alias ...='cd ../..'
