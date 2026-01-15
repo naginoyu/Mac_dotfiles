@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Apple Silicon Macの場合、HomebrewのPATHを通す
+if [[ "$(uname -m)" == "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Homebrewがインストールされているか確認
 if ! command -v brew &> /dev/null; then
     echo "Homebrew is not installed. Please run install-homebrew first."
