@@ -9,12 +9,9 @@ fi
 # Homebrewをインストール
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Apple Silicon Macの場合、PATHを追加
+# Apple Silicon Macの場合、現在のシェルセッションでPATHを通す
 if [[ "$(uname -m)" == "arm64" ]]; then
-    if ! grep -q '/opt/homebrew/bin/brew' "$HOME/.zshrc"; then
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.zshrc"
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 echo "Homebrew installed successfully."

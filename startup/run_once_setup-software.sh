@@ -2,6 +2,11 @@
 
 set -e
 
+# Apple Silicon Macの場合、HomebrewのPATHを通す
+if [[ "$(uname -m)" == "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 echo "Setting up software configurations and Tailscale..."
 
 # ============================================
