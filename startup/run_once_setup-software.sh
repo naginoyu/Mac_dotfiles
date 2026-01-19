@@ -33,6 +33,12 @@ echo "Installing latest Node.js via mise..."
 mise use -g node@latest
 
 # ============================================
+# mise - Python
+# ============================================
+echo "Installing latest Python via mise..."
+mise use -g python@latest
+
+# ============================================
 # Tailscale
 # ============================================
 echo "Checking Tailscale..."
