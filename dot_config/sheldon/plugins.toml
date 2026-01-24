@@ -19,3 +19,6 @@ github = "zsh-users/zsh-autosuggestions"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+
+[plugins.zsh_completions]
+github = "zsh-users/zsh-completions"

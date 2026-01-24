@@ -41,6 +41,7 @@ cask "proxy-audio-device"
 cask "raycast"
 cask "visual-studio-code"
 cask "wezterm"
+cask "zed"
 cask "zen"
 mas "LINE", id: 539883307
 vscode "bradlc.vscode-tailwindcss"
