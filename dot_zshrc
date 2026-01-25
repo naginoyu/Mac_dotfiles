@@ -4,6 +4,7 @@ export PATH=/usr/local/bin/git:$PATH   # Git
 eval "$(starship init zsh)"            # Starship prompt
 eval "$(sheldon source)"               # Sheldon plugin manager
 eval "$(mise activate zsh)"            # mise
+eval "$(zoxide init zsh)"              # zoxide
 
 # ===== History Settings =====
 HISTFILE=~/.zsh_history
