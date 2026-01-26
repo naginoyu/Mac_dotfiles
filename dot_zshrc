@@ -1,10 +1,18 @@
 # ===== PATH Settings =====
 export PATH="$HOME/.local/bin:$PATH"   # Claude Code
 export PATH=/usr/local/bin/git:$PATH   # Git
+export PATH=/usr/local/bin:$PATH       # zellij and other local tools
 eval "$(starship init zsh)"            # Starship prompt
 eval "$(sheldon source)"               # Sheldon plugin manager
 eval "$(mise activate zsh)"            # mise
 eval "$(zoxide init zsh)"              # zoxide
+
+# ===== Auto Start Zellij =====
+if command -v zellij >/dev/null 2>&1; then
+    if [ -z "$ZELLIJ" ]; then
+        zellij attach -c default
+    fi
+fi
 
 # ===== History Settings =====
 HISTFILE=~/.zsh_history
