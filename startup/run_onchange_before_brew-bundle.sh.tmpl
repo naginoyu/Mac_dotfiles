@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# このスクリプトはBrewfileが変更されたときのみ実行されます
+# Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+
+set -e
+
 # Apple Silicon Macの場合、HomebrewのPATHを通す
 if [[ "$(uname -m)" == "arm64" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -23,9 +28,5 @@ fi
 # brew bundleを実行
 echo "Installing packages from Brewfile..."
 brew bundle --file="$BREWFILE"
-
-# Brewfileに記載されていないパッケージを削除
-echo "Cleaning up packages not in Brewfile..."
-brew bundle cleanup --file="$BREWFILE" --force
 
 echo "Brew bundle completed successfully."

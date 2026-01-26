@@ -1,0 +1,16 @@
+# Git関連ファイル
+.git/
+.gitignore
+
+# ドキュメント
+README.md
+MIGRATION.md
+
+# スクリプト（ホームディレクトリには展開しない）
+scripts/
+
+# Claude Code関連
+.claude/
+
+# startup配下のスクリプト（chezmoiが自動実行するため、ホームディレクトリには不要）
+startup/

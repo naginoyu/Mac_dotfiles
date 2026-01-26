@@ -1,47 +1,90 @@
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
+# CLI tool for analyzing Claude Code usage from local JSONL files
 brew "ccusage"
+# Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# AI coding agent, built for the terminal
 brew "opencode"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# SVG rendering tool and library
 brew "resvg"
+# Safe, concurrent, practical language
 brew "rust"
+# 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# Fast, configurable, shell plugin manager
 brew "sheldon"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale", restart_service: :changed
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Enable Windows-like alt-tab
 cask "alt-tab"
+# Chromium based browser
 cask "arc"
+# Japanese input method
 cask "azookey"
+# Anthropic's official Claude AI desktop app
 cask "claude"
+# Voice and text chat software
 cask "discord"
+# Software to more effectively use an ELECOM mouse
 cask "elecom-mouse-util"
+# GIT client
 cask "fork"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Keyboard customiser
 cask "karabiner-elements"
+# Software for Logitech devices
 cask "logi-options+"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# OpenCore EFI bootloader configuration helper
 cask "opencore-configurator"
+# Remote desktop
 cask "parsec"
+# Sound and audio controller
 cask "proxy-audio-device"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Open-source code editor
 cask "visual-studio-code"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Multiplayer code editor
 cask "zed"
+# Gecko based web browser
 cask "zen"
 mas "LINE", id: 539883307
 vscode "bradlc.vscode-tailwindcss"
