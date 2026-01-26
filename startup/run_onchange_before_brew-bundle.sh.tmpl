@@ -29,4 +29,8 @@ fi
 echo "Installing packages from Brewfile..."
 brew bundle --file="$BREWFILE"
 
+# Brewfileに記載されていないパッケージを削除
+echo "Cleaning up packages not in Brewfile..."
+brew bundle cleanup --file="$BREWFILE" --force
+
 echo "Brew bundle completed successfully."
