@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# このスクリプトはBrewfileが変更されたときのみ実行されます
-# Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+# このスクリプトはchezmoi applyのたびに実行されます
+# BrewfileはmachineTypeに基づいて生成されます (desktop/laptop)
+# Machine type: {{ .chezmoi.data.machineType }}
 
 set -e
 

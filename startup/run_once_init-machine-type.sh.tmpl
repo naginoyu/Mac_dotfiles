@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# One-time setup script to initialize machine type
+# This script will only run once and prompt for machine type selection
+
+set -e
+
+CONFIG_FILE="$HOME/.config/chezmoi/chezmoi.toml"
+
+# 設定ファイルが既に存在する場合はスキップ
+if [ -f "$CONFIG_FILE" ]; then
+    echo "Config file already exists at $CONFIG_FILE"
+    echo "Use scripts/change-machine-type.sh to change machine type"
+    exit 0
+fi
+
+# 設定ディレクトリを作成
+mkdir -p "$(dirname "$CONFIG_FILE")"
+
+echo "=== Machine Type Setup ==="
+echo ""
+echo "Select the type of this machine:"
+echo "  1) desktop"
+echo "  2) laptop"
+echo ""
+
+# 対話的な選択
+read -p "Enter choice [1-2]: " choice
+
+case $choice in
+    1)
+        MACHINE_TYPE="desktop"
+        ;;
+    2)
+        MACHINE_TYPE="laptop"
+        ;;
+    *)
+        echo "Invalid choice. Please run 'chezmoi init' again."
+        exit 1
+        ;;
+esac
+
+# 設定ファイルを作成
+cat > "$CONFIG_FILE" <<EOF
+[data]
+    machineType = "$MACHINE_TYPE"
+EOF
+
+echo ""
+echo "✓ Machine type set to $MACHINE_TYPE"
+echo "✓ Config file created at $CONFIG_FILE"
+echo ""
+echo "Run 'chezmoi apply' to complete setup"

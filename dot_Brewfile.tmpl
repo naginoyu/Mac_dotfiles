@@ -31,17 +31,26 @@ cask "arc"
 cask "azookey"
 cask "claude"
 cask "discord"
+{{- if eq .chezmoi.config.data.machineType "desktop" }}
 cask "elecom-mouse-util"
+{{- end }}
 cask "fork"
 cask "ghostty"
+{{- if eq .chezmoi.config.data.machineType "desktop" }}
 cask "karabiner-elements"
+{{- end }}
 cask "logi-options+"
 cask "obsidian"
+{{- if eq .chezmoi.config.data.machineType "desktop" }}
 cask "opencore-configurator"
+{{- end }}
 cask "parsec"
 cask "proxy-audio-device"
 cask "raycast"
 cask "rectangle"
+{{- if eq .chezmoi.config.data.machineType "desktop" }}
+cask "betterdisplay"
+{{- end }}
 cask "stats"
 cask "visual-studio-code"
 cask "wezterm"
